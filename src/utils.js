@@ -29,7 +29,32 @@ const frenchConfigs = {
   timeSelect: 'Choisir',
   timeClose: 'Fermer',
 };
-
+const jalaaliConfigs = {
+  dayNames: ['شنبه', 'یکشنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه'],
+  dayNamesShort: ['ش', 'ی', 'د', 'س', 'چ', 'پ', 'ج'],
+  monthNames: [
+    'فروردین',
+    'اردیبهشت',
+    'خرداد',
+    'تیر',
+    'مرداد',
+    'شهریور',
+    'مهر',
+    'آبان',
+    'آذر',
+    'دی',
+    'بهمن',
+    'اسفند',
+  ],
+  selectedFormat: 'jYYYY/jMM/jDD',
+  dateFormat: 'jYYYY/jMM/jDD',
+  monthYearFormat: 'jYYYY jMM',
+  timeFormat: 'HH:mm ',
+  hour: 'ساعت',
+  minute: 'دقیقه',
+  timeSelect: 'انتخاب',
+  timeClose: 'بستن',
+};
 const gregorianConfigs = {
   dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   dayNamesShort: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
@@ -65,7 +90,7 @@ class utils {
       isGregorian,
       reverse: reverse === 'unset' ? !isGregorian : reverse,
     };
-    this.config = isGregorian ? gregorianConfigs : frenchConfigs;
+    this.config = isGregorian ? frenchConfigs : jalaaliConfigs;
     this.config = {...this.config, ...configs};
     if (mode === 'time' || mode === 'datepicker') {
       this.config.selectedFormat = this.config.dateFormat + ' ' + this.config.timeFormat;
