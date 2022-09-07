@@ -21,9 +21,9 @@ const frenchConfigs = {
     'Novembre',
     'Décembre',
   ],
-  selectedFormat: 'YYYY/MM/DD',
-  dateFormat: 'YYYY/MM/DD',
-  monthYearFormat: 'YYYY MM',
+  selectedFormat: 'DD/MM/YYYY',
+  dateFormat: 'DD/MM/YYYY',
+  monthYearFormat: 'MM YYYY',
   timeFormat: 'HH:mm',
   hour: 'Heure',
   minute: 'Minute',
@@ -52,7 +52,7 @@ class utils {
 
   getFormated = (date, formatName = 'selectedFormat') => date.format(this.config[formatName]);
 
-  getFormatedDate = (date = new Date(), format = 'YYYY/MM/DD') => moment(date).format(format);
+  getFormatedDate = (date = new Date(), format = 'DD/MM/YYYY') => moment(date).format(format);
 
   getTime = (time) => this.getDate(time).format(this.config.timeFormat);
 
