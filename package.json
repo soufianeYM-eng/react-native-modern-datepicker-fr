@@ -1,6 +1,6 @@
 {
   "name": "react-native-modern-datepicker-fr",
-  "version": "1.0.0-beta.92",
+  "version": "1.0.0-beta.97",
   "description": "A customizable calendar, including french and english",
   "main": "src/index.js",
   "scripts": {
